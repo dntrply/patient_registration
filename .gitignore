@@ -115,9 +115,15 @@ aadhaar_photo.jpg
 *.bmp
 *.tiff
 
-# Generated CSV files (may contain sensitive personal data)
+# Allow sample files (safe to commit)
+!sample_*
+
+# Generated CSV files (may contain sensitive personal data)  
 patient_data.csv
 *.csv
+
+# Allow sample CSV files (safe to commit)
+!sample_*.csv
 
 # IDE files
 .vscode/

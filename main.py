@@ -7,9 +7,9 @@ import csv
 
 def main():
     # 1. Load and preprocess image
-    img = cv2.imread("aadhaar_photo.jpg")
+    img = cv2.imread("sample_aadhaar_photo.jpg")
     if img is None:
-        print("Error: Could not load image 'aadhaar_photo.jpg'. Please check if the file exists.")
+        print("Error: Could not load image 'sample_aadhaar_photo.jpg'. Please check if the file exists.")
         return
     img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)              # convert to grayscale
     img = cv2.resize(img, None, fx=2.0, fy=2.0, interpolation=cv2.INTER_CUBIC)  # upscale image
@@ -160,7 +160,7 @@ def main():
     print(f"Address: {address}")
     
     # Generate CSV file with the extracted data
-    csv_filename = "patient_data.csv"
+    csv_filename = "sample_patient_data.csv"
     
     # Check if CSV file exists to determine if we need to write header
     file_exists = False

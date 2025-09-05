@@ -52,14 +52,14 @@ pip install opencv-python pytesseract
 
 ## Usage
 
-1. Place your Aadhaar card image in the project directory with the filename `aadhaar_photo.jpg`
+1. Place your Aadhaar card image in the project directory with the filename `sample_aadhaar_photo.jpg` (or modify the filename in main.py)
 
 2. Run the application:
 ```bash
 python main.py
 ```
 
-3. The extracted information will be displayed in the console and automatically saved to `patient_data.csv`
+3. The extracted information will be displayed in the console and automatically saved to `sample_patient_data.csv`
 
 ### Example Output
 
@@ -70,7 +70,7 @@ DOB: 1990-09-04
 UID: 123456789012
 Address: B-123, Sector 5, Andheri East, Mumbai, Maharashtra
 
-Data saved to patient_data.csv
+Data saved to sample_patient_data.csv
 ```
 
 ## CSV Output Format
@@ -108,12 +108,21 @@ The application recognizes Indian address patterns including:
 
 ```
 patient_registration/
-├── main.py              # Main application script
-├── aadhaar_photo.jpg    # Input Aadhaar card image (user-provided)
-├── patient_data.csv     # Generated CSV output
-├── README.md           # This documentation
-└── .gitignore          # Git ignore file
+├── main.py                    # Main application script
+├── sample_aadhaar_photo.jpg   # Sample Aadhaar card image (for demonstration)
+├── sample_patient_data.csv    # Sample CSV output (for demonstration)
+├── README.md                  # This documentation
+├── .gitignore                 # Git ignore file
+└── requirements.txt           # Python dependencies
 ```
+
+## Sample Data
+
+The repository includes sample files for demonstration:
+- `sample_aadhaar_photo.jpg` - Sample Aadhaar card image
+- `sample_patient_data.csv` - Sample extracted data in CSV format
+
+These files are safe to include in version control as they contain only demonstration data.
 
 ## Error Handling
 
