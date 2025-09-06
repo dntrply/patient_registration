@@ -138,13 +138,33 @@ These files are safe to include in version control as they contain only demonstr
 - Tesseract OCR accuracy depends on image quality
 - Currently optimized for English text extraction
 
+## Branch Strategy
+
+This repository uses the following branch structure:
+
+- **`base`** - Frozen reference branch containing the initial stable implementation
+  - Contains fully working OCR system with sample data
+  - Use this branch as a reference point or starting point for new features
+  - **Do not modify this branch** - it serves as the baseline
+  
+- **`master`** - Active development branch
+  - All new features and improvements are developed here
+  - May contain work-in-progress or experimental features
+
 ## Contributing
 
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/new-feature`)
-3. Commit your changes (`git commit -am 'Add new feature'`)
-4. Push to the branch (`git push origin feature/new-feature`)
-5. Create a Pull Request
+2. Create a feature branch from `master` (`git checkout -b feature/new-feature`)
+3. Make your changes and test thoroughly
+4. Commit your changes (`git commit -am 'Add new feature'`)
+5. Push to the branch (`git push origin feature/new-feature`)
+6. Create a Pull Request targeting the `master` branch
+
+To start from the baseline implementation:
+```bash
+git checkout base
+git checkout -b feature/your-feature-name
+```
 
 ## License
 
